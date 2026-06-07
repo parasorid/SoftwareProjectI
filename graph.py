@@ -1,6 +1,9 @@
 from urllib.parse import parse_qs
 from template import html
+import matplotlib as mpl
 import matplotlib.pyplot as plt
+
+mpl.use('Agg')
 
 def application(environ, start_response):
     if environ['PATH_INFO'] == '/img/graph.png':
